@@ -196,7 +196,8 @@ function copyText(text) {
 
 function openViewer(photoUrl) {
   var v = document.getElementById("imageViewer");
-  document.getElementById("viewerImg").src = photoUrl;
+  var fullUrl = photoUrl.replace("./images/", "./images_full/");
+  document.getElementById("viewerImg").src = fullUrl;
   v.style.display = "flex";
 }
 
