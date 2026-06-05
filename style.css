@@ -71,6 +71,13 @@ body::before {
   text-align: center;
 }
 
+.manager-note {
+  text-align: center;
+  font-size: 11px;
+  color: #c4b5ad;
+  margin-top: 2px;
+}
+
 /* ===== 信息行 ===== */
 .info-row {
   display: flex;
