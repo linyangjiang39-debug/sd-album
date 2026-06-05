@@ -1,0 +1,7 @@
+node_modules/
+test_processed.png
+*.traineddata
+qrcode.png
+.claude/
+images_backup/
+.DS_Store

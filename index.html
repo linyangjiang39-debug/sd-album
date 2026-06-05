@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SD 相册</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="title-box">
+      <h1>SD 相册</h1>
+    </div>
+
+    <div class="info-card manager-card">
+      <div class="info-row">
+        <span class="manager-label">部长 琪琪</span>
+        <span class="manager-contact">15918046098</span>
+        <button onclick="copyText('15918046098')">复制</button>
+      </div>
+      <div class="info-row">
+        <span class="manager-label">部长 小林</span>
+        <span class="manager-contact">13244894232</span>
+        <button onclick="copyText('13244894232')">复制</button>
+      </div>
+    </div>
+
+    <div class="search-card">
+      <input id="jobInput" type="text" placeholder="请输入工号，例如 A001">
+      <button onclick="searchUser()">搜索</button>
+    </div>
+
+    <div class="photo-card">
+      <div id="photoTitle" class="photo-title">照片区域</div>
+
+      <div id="photoGrid" class="photo-grid"></div>
+    </div>
+
+    <div class="schedule-card">
+      <div class="schedule-header" onclick="toggleSchedule()">
+        <span class="schedule-title">排班表 - 6月5号 周五</span>
+        <span id="scheduleArrow" class="schedule-arrow">▼</span>
+      </div>
+      <div id="scheduleBody" class="schedule-body">
+        <div class="shift-group shift-morning">
+          <div class="shift-label">早班 12:00−23:00</div>
+          <div class="shift-list">002、009、500、611、606、616、636、908、660、666、678、108、888、999、186、600、938、222</div>
+        </div>
+        <div class="shift-group shift-mid">
+          <div class="shift-label">中班 14:00−2:00</div>
+          <div class="shift-list">077、106、118、608、609、628、688、816、833、866、899、905、985、986、001、007、088、099、122、211、605、966、111、913、000、828、918、602</div>
+        </div>
+        <div class="shift-group shift-night">
+          <div class="shift-label">晚班 19:00−05:00</div>
+          <div class="shift-list">123、166、610、677、626、686、696、803、808、809、858、868、898、906、916、180、811、988、995、100、668、012、066、955、909、989、603、620、518、521</div>
+        </div>
+        <div class="shift-group shift-delay">
+          <div class="shift-label">推迟 13:00</div>
+          <div class="shift-list">908、636</div>
+        </div>
+        <div class="shift-group shift-rest">
+          <div class="shift-label">正常休假</div>
+          <div class="shift-list">-</div>
+        </div>
+        <div class="shift-group shift-bought">
+          <div class="shift-label">买假</div>
+          <div class="shift-list">777</div>
+        </div>
+        <div class="shift-group shift-sick">
+          <div class="shift-label">病假</div>
+          <div class="shift-list">968、618、520</div>
+        </div>
+        <div class="shift-group shift-long">
+          <div class="shift-label">长假</div>
+          <div class="shift-list">003、822、199、919、555、655</div>
+        </div>
+        <div class="shift-group shift-mleave">
+          <div class="shift-label">M假</div>
+          <div class="shift-list">622、168、155、658、008、006、789、101、801、188、900、800、633、818、933、126、911、005、619、333</div>
+        </div>
+        <div class="schedule-note">备注：每天可能随时有一定的变动</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="imageViewer" class="image-viewer" onclick="closeViewer()">
+    <img id="viewerImg" src="" alt="照片预览">
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
