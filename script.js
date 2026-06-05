@@ -10,18 +10,18 @@ const users = [
   { jobNo: "007", wechat: "", phone: "", photo: "./images/007.jpg" },
   { jobNo: "008", wechat: "", phone: "", photo: "./images/008.jpg" },
   { jobNo: "008_1", wechat: "", phone: "", photo: "./images/008_1.jpg" },
-  { jobNo: "009", wechat: "", phone: "", photo: "./images/009.png" },
-  { jobNo: "028", wechat: "", phone: "", photo: "./images/028.png" },
+  { jobNo: "009", wechat: "", phone: "", photo: "./images/009.jpg" },
+  { jobNo: "028", wechat: "", phone: "", photo: "./images/028.jpg" },
   { jobNo: "61", wechat: "", phone: "", photo: "./images/61.jpg" },
   { jobNo: "066", wechat: "", phone: "", photo: "./images/066.jpg" },
   { jobNo: "077", wechat: "", phone: "", photo: "./images/077.jpg" },
   { jobNo: "86", wechat: "", phone: "", photo: "./images/86.jpg" },
   { jobNo: "099", wechat: "", phone: "", photo: "./images/099.jpg" },
   { jobNo: "108", wechat: "", phone: "", photo: "./images/108.jpg" },
-  { jobNo: "122", wechat: "", phone: "", photo: "./images/122.png" },
+  { jobNo: "122", wechat: "", phone: "", photo: "./images/122.jpg" },
   { jobNo: "123", wechat: "", phone: "", photo: "./images/123.jpg" },
   { jobNo: "126", wechat: "", phone: "", photo: "./images/126.jpg" },
-  { jobNo: "138", wechat: "", phone: "", photo: "./images/138.png" },
+  { jobNo: "138", wechat: "", phone: "", photo: "./images/138.jpg" },
   { jobNo: "139", wechat: "", phone: "", photo: "./images/139.jpg" },
   { jobNo: "155", wechat: "", phone: "", photo: "./images/155.jpg" },
   { jobNo: "166", wechat: "", phone: "", photo: "./images/166.jpg" },
@@ -30,7 +30,7 @@ const users = [
   { jobNo: "211", wechat: "", phone: "", photo: "./images/211.jpg" },
   { jobNo: "222", wechat: "", phone: "", photo: "./images/222.jpg" },
   { jobNo: "333", wechat: "", phone: "", photo: "./images/333.jpg" },
-  { jobNo: "500", wechat: "", phone: "", photo: "./images/500.png" },
+  { jobNo: "500", wechat: "", phone: "", photo: "./images/500.jpg" },
   { jobNo: "521", wechat: "", phone: "", photo: "./images/521.jpg" },
   { jobNo: "555", wechat: "", phone: "", photo: "./images/555.jpg" },
   { jobNo: "600", wechat: "", phone: "", photo: "./images/600.jpg" },
@@ -55,7 +55,7 @@ const users = [
   { jobNo: "686", wechat: "", phone: "", photo: "./images/686.jpg" },
   { jobNo: "696", wechat: "", phone: "", photo: "./images/696.jpg" },
   { jobNo: "700", wechat: "", phone: "", photo: "./images/700.jpg" },
-  { jobNo: "789", wechat: "", phone: "", photo: "./images/789.png" },
+  { jobNo: "789", wechat: "", phone: "", photo: "./images/789.jpg" },
   { jobNo: "800", wechat: "", phone: "", photo: "./images/800.jpg" },
   { jobNo: "803", wechat: "", phone: "", photo: "./images/803.jpg" },
   { jobNo: "808", wechat: "", phone: "", photo: "./images/808.jpg" },
@@ -76,19 +76,19 @@ const users = [
   { jobNo: "899", wechat: "", phone: "", photo: "./images/899.jpg" },
   { jobNo: "899_1", wechat: "", phone: "", photo: "./images/899_1.jpg" },
   { jobNo: "900", wechat: "", phone: "", photo: "./images/900.jpg" },
-  { jobNo: "0905", wechat: "", phone: "", photo: "./images/0905.png" },
+  { jobNo: "0905", wechat: "", phone: "", photo: "./images/0905.jpg" },
   { jobNo: "906", wechat: "", phone: "", photo: "./images/906.jpg" },
   { jobNo: "908", wechat: "", phone: "", photo: "./images/908.jpg" },
   { jobNo: "911", wechat: "", phone: "", photo: "./images/911.jpg" },
   { jobNo: "913", wechat: "", phone: "", photo: "./images/913.jpg" },
   { jobNo: "916", wechat: "", phone: "", photo: "./images/916.jpg" },
   { jobNo: "918", wechat: "", phone: "", photo: "./images/918.jpg" },
-  { jobNo: "919", wechat: "", phone: "", photo: "./images/919.png" },
+  { jobNo: "919", wechat: "", phone: "", photo: "./images/919.jpg" },
   { jobNo: "933", wechat: "", phone: "", photo: "./images/933.jpg" },
   { jobNo: "938", wechat: "", phone: "", photo: "./images/938.jpg" },
   { jobNo: "966", wechat: "", phone: "", photo: "./images/966.jpg" },
   { jobNo: "985", wechat: "", phone: "", photo: "./images/985.jpg" },
-  { jobNo: "986", wechat: "", phone: "", photo: "./images/986.png" },
+  { jobNo: "986", wechat: "", phone: "", photo: "./images/986.jpg" },
   { jobNo: "988", wechat: "", phone: "", photo: "./images/988.jpg" },
   { jobNo: "995", wechat: "", phone: "", photo: "./images/995.jpg" },
   { jobNo: "1001", wechat: "", phone: "", photo: "./images/1001.jpg" },
@@ -104,9 +104,8 @@ const users = [
   { jobNo: "A001-72", wechat: "", phone: "", photo: "./images/A001-72.jpg" },
   { jobNo: "A001-75", wechat: "", phone: "", photo: "./images/A001-75.jpg" },
   { jobNo: "A001-78", wechat: "", phone: "", photo: "./images/A001-78.jpg" },
-  { jobNo: "A001-83", wechat: "", phone: "", photo: "./images/A001-83.png" },
-  { jobNo: "A001-102", wechat: "", phone: "", photo: "./images/A001-102.jpg" },
-  { jobNo: "微信图片_20260605155323_386_40", wechat: "", phone: "", photo: "./images/微信图片_20260605155323_386_40.jpg" }
+  { jobNo: "A001-83", wechat: "", phone: "", photo: "./images/A001-83.jpg" },
+  { jobNo: "A001-102", wechat: "", phone: "", photo: "./images/A001-102.jpg" }
 ];
 
 let currentUser = null;
@@ -158,16 +157,10 @@ function showUsers(list) {
 
 function filterUsers(keyword) {
   const kw = keyword.trim();
-
-  if (kw === "") {
-    showUsers(users);
-    return;
-  }
-
+  if (kw === "") { showUsers(users); return; }
   const matched = users.filter(function(user) {
     return user.jobNo.toLowerCase().indexOf(kw.toLowerCase()) !== -1;
   });
-
   showUsers(matched);
 }
 
@@ -178,8 +171,7 @@ function selectUser(user) {
 }
 
 function searchUser() {
-  const input = document.getElementById("jobInput");
-  filterUsers(input.value);
+  filterUsers(document.getElementById("jobInput").value);
 }
 
 function copyText(text) {
@@ -191,22 +183,20 @@ function copyText(text) {
 }
 
 function openViewer(photoUrl) {
-  const imageViewer = document.getElementById("imageViewer");
-  const viewerImg = document.getElementById("viewerImg");
-  viewerImg.src = photoUrl;
-  imageViewer.style.display = "flex";
+  var v = document.getElementById("imageViewer");
+  document.getElementById("viewerImg").src = photoUrl;
+  v.style.display = "flex";
 }
 
 function closeViewer() {
-  const imageViewer = document.getElementById("imageViewer");
-  const viewerImg = document.getElementById("viewerImg");
-  imageViewer.style.display = "none";
-  viewerImg.src = "";
+  var v = document.getElementById("imageViewer");
+  v.style.display = "none";
+  document.getElementById("viewerImg").src = "";
 }
 
 function toggleSchedule() {
-  const body = document.getElementById("scheduleBody");
-  const arrow = document.getElementById("scheduleArrow");
+  var body = document.getElementById("scheduleBody");
+  var arrow = document.getElementById("scheduleArrow");
   if (body.style.display === "none") {
     body.style.display = "block";
     arrow.classList.add("open");
