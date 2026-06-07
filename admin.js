@@ -306,11 +306,10 @@ function renderList() {
   }
   container.innerHTML = users.map((u, i) => `
     <div class="employee-row">
-      <div class="flex-row">
-        <div class="employee-info">
-          <div class="id">${u.jobNo}</div>
-          <div class="detail">${u.wechat || '-'} / ${u.phone || '-'}</div>
-        </div>
+      <img src="${u.photo}" class="photo-preview" style="width:50px;height:50px;" onerror="this.style.display='none'">
+      <div class="employee-info">
+        <div class="id">${u.jobNo}</div>
+        <div class="detail">${u.wechat || '-'} / ${u.phone || '-'}</div>
       </div>
       <div class="employee-actions">
         <button class="btn-sm btn-primary" onclick="editEmployee(${i})">编辑</button>
