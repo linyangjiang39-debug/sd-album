@@ -120,17 +120,15 @@ function showUsers(list) {
   const g = document.getElementById("photoGrid");
   document.getElementById("photoTitle").innerText = "全部员工（共 " + list.length + " 人）";
   g.innerHTML = "";
-  if (list.length === 0) { document.getElementById("photoTitle").innerText = "暂无员工，请管理员添加"; return; }
-  const obs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) { e.target.src = e.target.dataset.src; obs.unobserve(e.target); } });
-  }, { rootMargin: "600px" });
+  if (list.length === 0) { document.getElementById("photoTitle").innerText = "暂无员工"; return; }
+  const obs = new IntersectionObserver(function(e) { e.forEach(function(e) { if (e.isIntersecting) { e.target.src = e.target.dataset.src; obs.unobserve(e.target); } }); }, { rootMargin: "600px" });
   list.forEach(function(u) {
     const c = document.createElement("div"); c.className = "photo-card-item";
     const i = document.createElement("img"); i.dataset.src = u.photo; i.alt = u.jobNo;
     i.onclick = function() { openViewer(u.photo); };
     const l = document.createElement("div"); l.className = "photo-label"; l.innerText = u.jobNo;
     c.appendChild(i); c.appendChild(l);
-    c.onclick = function(e) { if (e.target.tagName !== "IMG") { selectUser(u); } };
+    c.onclick = function(e) { if (e.target.tagName !== "IMG") selectUser(u); };
     g.appendChild(c); obs.observe(i);
   });
 }
@@ -140,31 +138,10 @@ function filterUsers(k) {
   showUsers(users.filter(function(u) { return u.jobNo.toLowerCase().indexOf(kw.toLowerCase()) !== -1; }));
 }
 
-function selectUser(u) {
-  currentUser = u; document.getElementById("photoTitle").innerText = "已选中：" + u.jobNo;
-  document.getElementById("jobInput").value = u.jobNo;
-}
-
+function selectUser(u) { currentUser = u; document.getElementById("photoTitle").innerText = "已选中：" + u.jobNo; document.getElementById("jobInput").value = u.jobNo; }
 function searchUser() { filterUsers(document.getElementById("jobInput").value); }
-
-function copyText(t) {
-  navigator.clipboard.writeText(t).then(function() { alert("复制成功：" + t); }).catch(function() { alert("复制失败"); });
-}
-
-function openViewer(url) {
-  document.getElementById("viewerImg").src = url.replace("./images/", "./images_full/");
-  document.getElementById("imageViewer").style.display = "flex";
-}
-
-function closeViewer() {
-  document.getElementById("imageViewer").style.display = "none";
-  document.getElementById("viewerImg").src = "";
-}
-
-function toggleSchedule() {
-  var b = document.getElementById("scheduleBody"), a = document.getElementById("scheduleArrow");
-  if (b.style.display === "none") { b.style.display = "block"; a.classList.add("open"); }
-  else { b.style.display = "none"; a.classList.remove("open"); }
-}
-
+function copyText(t) { navigator.clipboard.writeText(t).then(function() { alert("复制成功：" + t); }).catch(function() { alert("复制失败"); }); }
+function openViewer(url) { document.getElementById("viewerImg").src = url.replace("./images/", "./images_full/"); document.getElementById("imageViewer").style.display = "flex"; }
+function closeViewer() { document.getElementById("imageViewer").style.display = "none"; document.getElementById("viewerImg").src = ""; }
+function toggleSchedule() { var b = document.getElementById("scheduleBody"), a = document.getElementById("scheduleArrow"); if (b.style.display === "none") { b.style.display = "block"; a.classList.add("open"); } else { b.style.display = "none"; a.classList.remove("open"); } }
 init();
