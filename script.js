@@ -103,12 +103,6 @@ const users = [
     photo: "./images/222.webp"
   },
   {
-    jobNo: "500",
-    wechat: "",
-    phone: "",
-    photo: "./images/500.webp"
-  },
-  {
     jobNo: "520",
     wechat: "",
     phone: "",
